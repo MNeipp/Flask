@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from math import floor
 app = Flask(__name__)
 
 @app.route('/<int:x>/<int:y>/<string:color1>/<string:color2>')

@@ -10,15 +10,27 @@
     <div class="container">
         <table>
             {% for x in range(0,x) %}
+                {% if x%2==0 %}
             <tr>
                 {% for y in range (0,y)%}
                 {% if y%2==0 %}
                 <td class="a" style="background: {{color1}};"></td>
-                {%else%}
+                {% else %}
                 <td class="b" style="background: {{color2}};"></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+                {% else %}
+            <tr>
+                {% for y in range (0,y)%}
+                {% if y%2==0 %}
+                <td class="b" style="background: {{color2}};"></td>
+                {%else%}
+                <td class="a" style="background: {{color1}};"></td>
                 {%endif%}
                 {%endfor%}
             </tr>
+            {% endif %}
             {% endfor %}
         </table>
     </div>
