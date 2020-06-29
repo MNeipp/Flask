@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-b+jboW/YIpW2ZZYyYdXczKK6igHlnkPNfN9kYAbqYV7rNQ9PKTXlS2D6j1QZIATW" crossorigin="anonymous">
+    <title>HTML Table</title>
+</head>
+<body>
+<div class="container d-flex justify-content-center mt-5">
+    <table class="table table-bordered table-striped w-50">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <th>{{employee.first_name}}</th>
+                <th>{{employee.last_name}}</th>
+                <th>{{employee.first_name}} {{employee.last_name}}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+</body>
+</html>
